@@ -11,6 +11,7 @@
 
 class CalculationStrategy {
 public:
+    virtual ~CalculationStrategy() = default;
     virtual void calculate(const QString& directory) = 0;
 };
 
