@@ -20,4 +20,5 @@ HEADERS += \
     ByFileType_CalculationStrategy.h \
     ByFolder_CalculationStrategy.h \
     CalculationStrategy.h \
-    CalculationStrategy.h
+    CalculationStrategy.h \
+    MainWindow.h
