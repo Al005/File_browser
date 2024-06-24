@@ -5,12 +5,12 @@
 #include <memory>
 
 class MainWindow {
-    std::unique_ptr<CalculationStrategy> strategy_;
+    std::shared_ptr<CalculationStrategy> strategy_;
 
 public:
-    MainWindow(std::unique_ptr<CalculationStrategy> strategy) {
+    MainWindow(std::shared_ptr<CalculationStrategy> strategy) {
         if (strategy) {
-            strategy_ = std::move(strategy);
+            strategy_ = strategy;
         }
         else {
             qDebug() << "Strategy is nullptr!" << Qt::endl;
@@ -18,9 +18,9 @@ public:
         }
     }
 
-    void setStrategy(std::unique_ptr<CalculationStrategy> strategy) {
+    void setStrategy(std::shared_ptr<CalculationStrategy> strategy) {
         if (strategy) {
-            strategy_ = std::move(strategy);
+            strategy_ = strategy;
         }
         else {
             qDebug() << "Strategy is nullptr!" << Qt::endl;

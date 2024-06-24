@@ -11,11 +11,11 @@ int main() {
     context.performCalculation(directory);
 
     qDebug() << "ByFolder: ";
-    context.setStrategy(std::make_unique<ByFolder_CalculationStrategy>());
+    context.setStrategy(std::make_shared<ByFolder_CalculationStrategy>());
     context.performCalculation(directory);
 
     qDebug() << "ByFileType: ";
-    context.setStrategy(std::make_unique<ByFileType_CalculationStrategy>());
+    context.setStrategy(std::make_shared<ByFileType_CalculationStrategy>());
     context.performCalculation(directory);
 
     return 0;
